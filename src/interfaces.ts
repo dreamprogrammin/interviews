@@ -1,4 +1,4 @@
-export interface Iinterfaces {
+export interface IInterviews {
   id: string
   company: string
   hrName: string
@@ -6,5 +6,5 @@ export interface Iinterfaces {
   contactWhatsApp?: string
   contactTelegram?: string
   contactPhone?: string
-  createAt: Date
+  createdAt: Date
 }

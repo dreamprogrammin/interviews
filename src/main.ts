@@ -4,16 +4,11 @@ import 'primeicons/primeicons.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import defineComponents from '@/components/global'
 import PrimeVue from 'primevue/config'
 import Aura from '@primevue/themes/aura'
 import ToastService from 'primevue/toastservice'
-
-import Menubar from 'primevue/menubar'
-import Button from 'primevue/button'
-import InputText from 'primevue/inputtext'
-import Toast from 'primevue/toast'
-import ProgressSpinner from 'primevue/progressspinner'
-import Card from 'primevue/card'
+import ConfirmationService from 'primevue/confirmationservice'
 
 import App from './App.vue'
 import router from './router'
@@ -38,12 +33,8 @@ app.use(PrimeVue, {
     preset: Aura
   }
 })
+app.use(defineComponents)
 app.use(ToastService)
+app.use(ConfirmationService)
 
-app.component('app-menubar', Menubar)
-app.component('app-button', Button)
-app.component('app-input-text', InputText)
-app.component('app-toast', Toast)
-app.component('app-spinner', ProgressSpinner)
-app.component('app-card', Card)
 app.mount('#app')
